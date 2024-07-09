@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Bar Loader</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      .loader {
+        width: 200px;
+        height: 20px;
+        background-color: #ddd;
+        position: relative;
+      }
+
+      .bar {
+        width: 0%;
+        height: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: progress 3s infinite;
+      }
+
+      @keyframes progress {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="bar"></div>
+    </div>
+  </body>
+</html>
